@@ -2,7 +2,7 @@ ContentReuse
 ============
 
 'ContentReuse' is a tracker plugin for Piwik open source web analytics.
-It adds configurable external links to the top menu of a Piwik installation.
+It extends the 'Piwik_Tracker_Visit' class to facilitate analytics for content re-use.
 
 ## Requirements
 
