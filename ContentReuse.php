@@ -1,9 +1,9 @@
 <?php
 /**
  * Extending Piwik for the JISC Track OER project.
- * 
+ *
  * @link http://track.olnet.org
- * @license
+ * @license http://gnu.org/licenses/gpl-2.0.html
  * @copyright 2012 The Open University.
  * @author N.D.Freear, 23 August 2012.
  *
@@ -21,14 +21,12 @@ class Piwik_ContentReuse extends Piwik_Plugin
 	public function getInformation()
 	{
 		return array(
-			'description' =>
-			'* A plugin to extend Piwik_Tracker_Visit for content re-use [JISC Track OER project]',
-			#Piwik_Translate('CoreAdminHome_PluginDescription'),
+			'description' => Piwik_Translate('ContentReuse_PluginDescription'),
 			'homepage' => 'http://track.olnet.org/',
 			'author' => 'IET at The Open University',
 			'author_homepage' => 'http://iet.open.ac.uk/',
 			'version' => '0.1',
-			'translationAvailable' => false,
+			'translationAvailable' => true,
 			'TrackerPlugin' => true,
 		);
 	}
@@ -57,6 +55,10 @@ class Piwik_ContentReuse extends Piwik_Plugin
 }
 
 
+/**
+ * @see Piwik_Tracker_Visit::setRequest
+ * @link core/Tracker/Visit.php
+ */
 class Reuse_Tracker_Visit extends Piwik_Tracker_Visit
 {
 	function setRequest($requestArray)
